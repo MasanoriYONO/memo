@@ -50,5 +50,15 @@
 <script src="js/memo.js"></script>
 <script src="js/app.js"></script>
 <script src="js/cssua.min.js"></script>
+<script>
+$(function(){
+    if(monaca.isIOS){
+        $("header").css("margin-top","25px");
+        // $(".ui-btn-right").css("margin-top","20px");
+        $("section").css("margin-top","25px");
+        
+    }
+});
+</script>
 </body>
 </html>
