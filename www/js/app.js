@@ -20,7 +20,9 @@ function initTopPage() {
     for (var i in list) {
         var memo = list[i];
         var d = new Date(memo.time);
-        var date = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate();
+        // var date = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate();
+        var date = moment(memo.time).format("YYYY-MM-DD HH:mm:ss")
+        console.log(date);
         
         $li = $("<li><a href='#' class='show'><h3></h3><p></p></a><a href='#' class='delete'>Delete</a></li>");
         $li.data("id", memo.id);
